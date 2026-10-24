@@ -1,0 +1,21 @@
+{
+  "name": "relayforge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RelayForge - Open-source full-stack integration reliability platform",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "dev:api": "pnpm --filter @relayforge/api dev",
+    "dev:web": "pnpm --filter @relayforge/web dev",
+    "build": "pnpm --recursive --filter \"./apps/*\" build",
+    "lint": "pnpm --recursive --filter \"./apps/*\" lint",
+    "type-check": "pnpm --recursive --filter \"./apps/*\" type-check",
+    "test": "pnpm --recursive --filter \"./apps/*\" test",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.5.2"
+  },
+  "packageManager": "pnpm@12.15.0"
+}
